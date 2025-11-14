@@ -14,7 +14,6 @@ public class Main {
 		System.out.println(car2.getColor());
 		car2.setPrice(900);
 		System.out.println(car2.getPrice());
-
 		
 	}
 }

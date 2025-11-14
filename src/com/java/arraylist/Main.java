@@ -2,6 +2,7 @@ package com.java.arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Main {
 
@@ -15,6 +16,7 @@ public class Main {
 //		you need the diamond operator to define type of object to be stored in the ArrayList 
 //		however the right side bracket can be left empty as Java will inferred
 		
+		//primitive data type
 		ArrayList<Integer> list = new ArrayList<>();
 		list.add(1);
 		list.add(7);
@@ -27,6 +29,7 @@ public class Main {
 		dlist.add(0.68);
 		System.out.println(dlist);
 		
+		// String is not primitive data type, String object
 		ArrayList<String> fruits = new ArrayList<>();
 		// ArrayList add method
 		fruits.add("apple");
@@ -60,5 +63,15 @@ public class Main {
 		// get method
 		System.out.println(fruits.get(0));
 		System.out.println(fruits.get(1));
+		
+		// array List of student object
+		List<Student> students = new ArrayList<>();
+		students.add(new Student("James", "CS00100", 3.51));
+		students.add(new Student("John", "CS00123", 3.59));
+		students.add(new Student("Joan", "CS00102", 3.9));		
+		
+		for (Student student : students) {
+			System.out.println(student.info());
+		}
 	}
 }
